@@ -64,6 +64,10 @@ The setup script will automatically download and install the latest Neovim versi
 ### Autocompletion (when popup appears)
 - `<C-Space>` - Trigger autocomplete manually
 - `<CR>` (Enter) - Accept selected completion
+- `<Tab>` - Next completion item
+- `<S-Tab>` - Previous completion item
+- `<C-n>` - Next completion item (Vim-style)
+- `<C-p>` - Previous completion item (Vim-style)
 - `<C-e>` - Close completion menu
 - `<C-b>` - Scroll documentation up
 - `<C-f>` - Scroll documentation down
