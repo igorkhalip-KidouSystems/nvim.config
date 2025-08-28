@@ -85,7 +85,7 @@ This configuration includes Docker container development support for seamless re
 
 1. **Add alias to your shell** (recommended):
 ```bash
-echo 'alias nvim-docker="~/.config/nvim/scripts/attach_docker.sh"' >> ~/.bashrc
+echo 'alias ndex="~/.config/nvim/scripts/attach_docker.sh"' >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -99,7 +99,7 @@ source ~/.bashrc
 
    **Step 2:** Attach with Neovim (in a new terminal):
    ```bash
-   nvim-docker
+   ndex
    # or directly: ~/.config/nvim/scripts/attach_docker.sh
    ```
 
