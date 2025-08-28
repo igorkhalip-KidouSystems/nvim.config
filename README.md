@@ -76,3 +76,13 @@ The setup script will automatically download and install the latest Neovim versi
 - `y` - Yank (copy) to system clipboard
 - `p` - Paste from system clipboard
 - `d` - Delete and copy to system clipboard
+
+## Docker Development
+
+For Docker container development, switch to the `docker` branch:
+
+```bash
+git checkout docker
+```
+
+The `docker` branch includes additional scripts and documentation for seamless Docker container development with full Neovim integration.
