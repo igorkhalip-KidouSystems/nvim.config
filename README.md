@@ -77,12 +77,44 @@ The setup script will automatically download and install the latest Neovim versi
 - `p` - Paste from system clipboard
 - `d` - Delete and copy to system clipboard
 
-## Docker Development
+## Docker Integration
 
-For Docker container development, switch to the `docker` branch:
+This configuration includes Docker container development support for seamless remote development.
 
+### Setup for Docker Development
+
+1. **Add alias to your shell** (recommended):
 ```bash
-git checkout docker
+echo 'alias nvim-docker="~/.config/nvim/scripts/attach_docker.sh"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
-The `docker` branch includes additional scripts and documentation for seamless Docker container development with full Neovim integration.
+2. **Usage** (Two-step process):
+
+   **Step 1:** Start your Docker container first:
+   ```bash
+   cd ~/github/AIRCoM_main/docker
+   ./run_docker.sh /path/to/AIRCoM_main
+   ```
+
+   **Step 2:** Attach with Neovim (in a new terminal):
+   ```bash
+   nvim-docker
+   # or directly: ~/.config/nvim/scripts/attach_docker.sh
+   ```
+
+### How it works
+
+- **First time**: Script automatically installs Neovim v0.11.3 and xclip in container
+- **Subsequent runs**: Connects immediately with your full nvim configuration
+- **Environment**: All your plugins, LSP, and settings work inside the container
+- **File access**: Direct access to container filesystem and mounted volumes
+
+### Container Features
+
+- Full Neovim configuration with all plugins
+- LSP support for container-specific dependencies  
+- System clipboard integration with xclip
+- Container aliases: `cb` (colcon build), `cbps` (build package), `ssb` (source build)
+
+**Note:** The container must be running before using the attach script. If the container stops, restart it with step 1 above.
