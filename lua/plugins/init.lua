@@ -22,4 +22,5 @@ require("lazy").setup({
   require("plugins.gitsigns"),
   require("plugins.telescope"),
   require("plugins.which-key"),
+  require("plugins.lazygit"),
 }, {})
