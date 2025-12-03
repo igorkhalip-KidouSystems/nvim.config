@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup plugins
 require("lazy").setup({
   require("plugins.nvim-tree"),
+  require("plugins.kanagawa"),
   require("plugins.tokyonight"),
   require("plugins.treesitter"),
   require("plugins.lsp"),
