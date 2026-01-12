@@ -23,16 +23,16 @@ sudo rm -rf "$INSTALL_DIR"
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
 
 echo "Adding Neovim to PATH..."
-if ! grep -q "/opt/nvim-linux64/bin" ~/.bashrc; then
-    echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.bashrc
+if ! grep -q "/opt/nvim-linux-x86_64/bin" ~/.bashrc; then
+    echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.bashrc
     echo "Added to ~/.bashrc"
 else
     echo "Already in ~/.bashrc"
 fi
 
-if ! grep -q "/opt/nvim-linux64/bin" ~/.zshrc 2>/dev/null; then
+if ! grep -q "/opt/nvim-linux-x86_64/bin" ~/.zshrc 2>/dev/null; then
     if [ -f ~/.zshrc ]; then
-        echo 'export PATH="$PATH:/opt/nvim-linux64/bin"' >> ~/.zshrc
+        echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.zshrc
         echo "Added to ~/.zshrc"
     fi
 fi
